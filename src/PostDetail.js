@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 function PostDetail({match}) {
   useEffect(() => {
     fetchItem();
-    console.log("Match :", match);
   }, []);
 
   const [item, setItem] = useState({});
@@ -11,7 +10,6 @@ function PostDetail({match}) {
   const fetchItem = async () => {
     const fetchItem = await fetch(`https://jsonplaceholder.typicode.com/posts/${match.params.id}`);
     const item = await fetchItem.json();
-    console.log(item);
     setItem(item);
   };
   
