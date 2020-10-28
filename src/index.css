@@ -50,6 +50,7 @@ a {
 
 .nav-item {
   width: calc(var(--nav-size)*0.8);
+  margin-top: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
