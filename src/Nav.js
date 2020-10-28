@@ -6,7 +6,6 @@ import { ReactComponent as Arrow } from './icons/dropdown.svg';
 import { ReactComponent as Setting } from './icons/settings.svg';
 import { ReactComponent as Question } from './icons/questionMark.svg';
 import { ReactComponent as Logout } from './icons/logout.svg';
-import { ReactComponent as RightArr } from './icons/rightArrow.svg';
 import { ReactComponent as LeftArr } from './icons/leftArrow.svg';
 import { CSSTransition } from 'react-transition-group';
 import { Link } from 'react-router-dom';
@@ -41,10 +40,10 @@ function DropdownMenu() {
         onClick={calcHeight}
         >
         <div className="menu">
-          <DropdownItem leftIcon={<Setting />} rightIcon={<RightArr />} goToMenu="settings">
+          <DropdownItem leftIcon={<Setting />} goToMenu="settings">
             Settings & Privacy
           </DropdownItem>
-          <DropdownItem leftIcon={<Question />} rightIcon={<RightArr />}>
+          <DropdownItem leftIcon={<Question />}>
             Help & Support
           </DropdownItem>
           <DropdownItem leftIcon={<Logout />}>
