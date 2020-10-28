@@ -8,7 +8,6 @@ import { ReactComponent as Question } from './icons/questionMark.svg';
 import { ReactComponent as Logout } from './icons/logout.svg';
 import { ReactComponent as LeftArr } from './icons/leftArrow.svg';
 import { CSSTransition } from 'react-transition-group';
-import { Link } from 'react-router-dom';
 
 function DropdownMenu() {
 
@@ -22,11 +21,11 @@ function DropdownMenu() {
 
   function DropdownItem(props) {
     return (
-      <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+      <div className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
         <span className="icon-button">{ props.leftIcon }</span>
         { props.children }
         <span className="icon-right">{ props.rightIcon }</span>
-      </a>
+      </div>
     );
   }
 
@@ -86,15 +85,13 @@ function NavItem(props) {
   const [open, setOpen] = useState(false);
 
   return (
-    <Link to={ `/posts`}>
     <li className="nav-item">
-      <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
+      <div className="icon-button" onClick={() => setOpen(!open)}>
         { props.icon }
-      </a>
+      </div>
 
       {open && props.children}
     </li>
-    </Link>
   );
 }
 
