@@ -100,6 +100,7 @@ a {
   border-radius: var(--border-radius);
   transition: background var(--speed);
   padding: 0.5rem;
+  color: var(--text-color);
 }
 
 .menu-item:hover {
